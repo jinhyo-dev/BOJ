@@ -4,4 +4,4 @@ A *= bomal // 12
 B *= A // 8
 C *= B // 5
 
-print(C)    
+print(C)
