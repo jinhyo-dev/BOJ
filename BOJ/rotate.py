@@ -1,0 +1,6 @@
+A = input()
+arr = list(A)
+B = int(arr[1]+ arr[2]+ arr[0])
+C = int(arr[2]+ arr[0]+arr[1])
+answer = int(A) + int(B) + int(C)
+print(answer)

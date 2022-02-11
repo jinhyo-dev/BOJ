@@ -1,0 +1,5 @@
+str = input()
+arr = list(str)
+reverse = list(str)
+reverse.reverse()
+print(1) if reverse == arr else print(0)
