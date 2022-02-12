@@ -11,12 +11,10 @@ for i in range(N):
     q.append(num)
 
 while len(q):
-    if q[0] not in arr:
+    if q[0] :
         print('+')
         arr.append(k)
         k += 1
-    else:
+    elif q[0] in arr:
         print('-')
         q.popleft()
-
-        
