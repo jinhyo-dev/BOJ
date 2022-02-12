@@ -11,7 +11,7 @@ for i in range(N):
     q.append(num)
 
 while len(q):
-    if q[0] :
+    if q[0] not in arr:
         print('+')
         arr.append(k)
         k += 1
