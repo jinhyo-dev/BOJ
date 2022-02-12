@@ -1,20 +1,26 @@
-from collections import deque
 import sys
-k = 1
-arr = []
-q = deque()
 input = sys.stdin.readline
 N = int(input())
+stack = []
+arr = []
+k = 1
+boolean = True
 
 for i in range(N):
     num = int(input())
-    q.append(num)
-
-while len(q):
-    if q[0] not in arr:
-        print('+')
-        arr.append(k)
+    while k <= num:
+        stack.append(k)
+        arr.append('+')
         k += 1
-    elif q[0] in arr:
-        print('-')
-        q.popleft()
+    
+    if stack[-1] == num:
+        stack.pop()
+        arr.append('-')
+    else:
+        print('NO')
+        boolean = False
+        break
+
+if boolean == True:
+    for i in arr:
+        print(i)
