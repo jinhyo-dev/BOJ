@@ -1,6 +1,3 @@
-from re import S
-
-
 while True:
   sum = 0
   oct = list(input())
