@@ -9,4 +9,4 @@ def sollution(N, arr):
       return result
     result += N // i
 
-print(min(sollution(N, five) - (sollution(N-M, five) + sollution(M, five)), sollution(N, two) - (sollution(N-M, two) - sollution(M, two))))
+print(min(sollution(N, five) - (sollution(N-M, five) + sollution(M, five)), sollution(N, two) - (sollution(N-M, two) + sollution(M, two))))
