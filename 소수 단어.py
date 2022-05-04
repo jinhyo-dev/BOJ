@@ -1,19 +1,16 @@
-def isPrime(num):
-  if num == 1:
-    return True
+import math
+
+word = input()
+total = 0
+for w in word:
+  if w.islower():
+    total += ord(w) - 96    
   else:
-    for i in range(2, int(num**0.5) + 1):
-      if num % i == 0:
-        return False
-      return True
+    total += ord(w) - 38    
 
-sum = 0
-word = list(input())
+isPrime = True
+for i in range(2, int(math.sqrt(total)) + 1):
+  if total % i == 0:
+    isPrime = False
 
-for i in word:
-  if i.islower() == True:
-    sum += ord(i) - 96
-  else:
-    sum += ord(i) - 64
-
-print('It is a prime word.' if isPrime(sum) else 'It is not a prime word.')
+print('It is a prime word.' if isPrime else 'It is not a prime word.')
