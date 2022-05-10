@@ -1,4 +1,3 @@
-
 N, M, V = map(int, input().split())
 graph = [[0] * (N+1) for _ in range(N + 1)]
 visited = [0] * (N+1)
