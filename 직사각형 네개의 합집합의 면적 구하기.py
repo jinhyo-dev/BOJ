@@ -9,5 +9,4 @@ cnt = 0
 for r in square:
   cnt += sum(r)
 
-print(square)
 print(cnt)
