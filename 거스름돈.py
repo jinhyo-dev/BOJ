@@ -1,31 +1,23 @@
-pay, price = map(int, input().split())
-coin = 0
-pay -= price
-while True:
-  if pay == 0:
-    break
-  elif pay >= 500:
-    pay -= 500
-    coin += 1
-    continue
-  elif pay >= 100:
-    pay -= 100
-    coin += 1
-    continue
-  elif pay >= 50:
-    pay -= 50
-    coin += 1
-    continue
-  elif pay >= 10:
-    pay -= 10
-    coin += 1
-    continue
-  elif pay >= 5:
-    pay -= 5
-    coin += 1
-    continue
-  elif pay >= 1:
-    pay -= 1
-    coin += 1
-    continue
-print(coin)
+N = int(input())
+N = 1000 - N
+cnt = 0
+while N != 0:
+  if N - 500 >= 0:
+    N -= 500
+    cnt += 1
+  elif N - 100 >= 0:
+    N -= 100
+    cnt += 1
+  elif N - 50 >= 0:
+    N -= 50
+    cnt += 1
+  elif N - 10 >= 0:
+    N -= 10
+    cnt += 1
+  elif N - 5 >= 0:
+    N -= 5
+    cnt += 1
+  elif N - 1 >= 0:
+    N -= 1
+    cnt += 1
+print(cnt)
