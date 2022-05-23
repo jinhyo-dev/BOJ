@@ -18,5 +18,5 @@ for i in range(K):
   while j < N and jewel[j][0] < bag[i]:
     pq.put(jewel[j][1])
     j += 1
-  V += pq.top()
-  pq.pop()
+  #V += pq.top()
+  #pq.pop()
