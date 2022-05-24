@@ -1,22 +1,24 @@
-from queue import PriorityQueue
-pq = PriorityQueue()
+from sys import stdin
+import heapq
+input = stdin.readline
 
 N, K = map(int, input().split())
-jewel = bag = []
+jewel = []
+bag = []
 for _ in range(N):
-  M, V = map(int, input().split())
-  jewel.append([M, V])
+  heapq.heappush(jewel, list(map(int, input().split())))
 
 for _ in range(K):
   bag.append(int(input()))
-
-jewel.sort()
 bag.sort()
 
-for i in range(K):
-  j = 0
-  while j < N and jewel[j][0] < bag[i]:
-    pq.put(jewel[j][1])
-    j += 1
-  #V += pq.top()
-  #pq.pop()
+answer = 0
+tmp = []
+for i in bag:
+  while jewel and i >= jewel[0][0]:
+    heapq.heappush(tmp, -heapq.heappop(jewel)[1])
+  if tmp:
+    answer -= heapq.heappop(tmp)
+  elif not jewel:
+    break
+print(answer)
