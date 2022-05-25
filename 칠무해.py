@@ -1,7 +1,9 @@
-import heapq
+import sys
+input = sys.stdin.readline
 
-arr = []
+N = int(input())
+arr = [float(input()) for _ in range(N)]
+arr.sort()
 
-for _ in range(int(input())):
-  heapq.heappush(arr, float(input()))
-print(arr)
+for i in range(7):
+  print('{:.3f}'.format(arr[i]))
