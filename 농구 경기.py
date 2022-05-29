@@ -12,7 +12,4 @@ for i in tmp:
     name.append(i)
 
 name.sort()
-if len(name) == 0:
-  print("PREDAJA")
-else:
-  print(''.join(name))
+print('PREDAJA' if len(name) == 0 else ''.join(name))
