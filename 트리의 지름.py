@@ -1,5 +1,6 @@
 import sys
 from collections import deque
+
 q = deque()
 input = sys.stdin.readline
 V = int(input())
